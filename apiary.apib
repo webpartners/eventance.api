@@ -5,42 +5,284 @@ HOST: http://api.eventance.com/
 
 Eventance public API.
 
-# Group Club
+# Auth [/]
 
-## Collection [/club]
+Token-based authorization.
 
-### Retrieve the Club list [GET]
+### API Token create [POST /api-token-auth/]
+    
++ Request
+
+            {
+                "username": "test",
+                "password": "test"
+            }
 
 + Response 200 (application/json)
 
-        {
-            "questions_url": "/questions"
-        }
+            {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwib3JpZ19pYXQiOjE0MzEzMzU1MjgsInVzZXJfaWQiOjEsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNDM5MzM1NTI4fQ.s84IiGYLz649KILx2NfZ7KfLk928xcLJvMC2mNlXB6Q"
+            }
+
++ Response 400 (application/json)
+
+            {
+                "non_field_errors": [
+                    "Unable to login with provided credentials."
+                ]
+            }
         
-### Create a Club [POST]
+### API Token refresh [POST /api-token-refresh/]
 
-+ Response 201 (application/json)
++ Request
+    
+            {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwib3JpZ19pYXQiOjE0MzEzMzU1MjgsInVzZXJfaWQiOjEsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNDM5MzM1NTI4fQ.s84IiGYLz649KILx2NfZ7KfLk928xcLJvMC2mNlXB6Q"
+            }
+    
++ Response 200 (application/json)
+    
+            {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwib3JpZ19pYXQiOjE0MzEzMzU1MjgsInVzZXJfaWQiOjEsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNDM5MzM1NTI4fQ.s84IiGYLz649KILx2NfZ7KfLk928xcLJvMC2mNlXB6Q"
+            }
 
-        {
-            "questions_url": "/questions"
-        }
++ Response 400 (application/json)
+
+            {
+                "non_field_errors": [
+                    "Error decoding signature."
+                ]
+            }
         
-## Entity [/club/{id}]
+### API Token verfy [POST /api-token-verify/]
 
-### Retrive an specific club [GET]
++ Request
+    
+            {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwib3JpZ19pYXQiOjE0MzEzMzU1MjgsInVzZXJfaWQiOjEsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNDM5MzM1NTI4fQ.s84IiGYLz649KILx2NfZ7KfLk928xcLJvMC2mNlXB6Q"
+            }
+    
++ Response 200 (application/json)
+    
+            {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwib3JpZ19pYXQiOjE0MzEzMzU1MjgsInVzZXJfaWQiOjEsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNDM5MzM1NTI4fQ.s84IiGYLz649KILx2NfZ7KfLk928xcLJvMC2mNlXB6Q"
+            }
+
++ Response 400 (application/json)
+
+            {
+                "non_field_errors": [
+                    "Error decoding signature."
+                ]
+            }
+        
+# Group [/api/1.0/club/{club_id}/staff-group/]
+
+The group API
+
+### Group create [POST]
+
 + Parameters
-    + id (string) ... Id
+    + club_id (required, int) ... staff's club
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+
+    + Body
+        
+            {
+                "name": "The group name"
+            }
+
++ Response 200 (application/json)
+    
+            {
+                "id": 1,
+                "club": "http://localhost:8000/api/1.0/club/1",
+                "name": "The group name"
+            }
+
++ Response 401 (application/json)
+
+            {
+                "detail": "Las credenciales de autenticación no se proveyeron."
+            }
+            
++ Response 409 (text/html)
+            
+            CONFLICT: duplicated object
+
+### Group list [GET]
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+
+
 + Response 200 (application/json)
 
-        {
-            "questions_url": "/questions"
-        }
-        
-### Delete a club [DELETE]
-+ Parameters
-    + id (string) ... Id
-+ Response 201 (application/json)
+            {
+                "count": 2,
+                "next": null,
+                "previous": null,
+                "results": [
+                    {
+                        "id": 1,
+                        "club": "http://localhost:8000/api/1.0/club/1",
+                        "name": "Camareros"
+                    },
+                    {
+                        "id": 2,
+                        "club": "http://localhost:8000/api/1.0/club/1",
+                        "name": "Seguridad"
+                    }
+                ]
+            }
 
-        {
-            "questions_url": "/questions"
-        }
++ Response 401 (application/json)
+
+            {
+                "detail": "Las credenciales de autenticación no se proveyeron."
+            }
+            
+# Club [/api/1.0/club/]
+
+The club API
+
+### Club create [POST]
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+
+    + Body
+        
+            {
+                "name": "MyClub"
+            }
+            
++ Response 200 (application/json)
+
+            {
+                "id": 3,
+                "name": "MyClub",
+                "logo": "",
+                "removed": false
+            }
+
++ Response 401 (application/json)
+
+            {
+                "detail": "Las credenciales de autenticación no se proveyeron."
+            }
+
++ Response 401 (text/html)
+
+            CONFLICT: duplicated object
+
+### Club list [GET]
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+
++ Response 200 (application/json)
+
+            {
+                "count": 2,
+                "next": null,
+                "previous": null,
+                "results": [
+                    {
+                        "id": 1,
+                        "name": "TheOne",
+                        "logo": "sdfsd",
+                        "removed": false
+                    },
+                    {
+                        "id": 2,
+                        "name": "SDFsa",
+                        "logo": "sdfds",
+                        "removed": false
+                    }
+                ]
+            }
+            
++ Response 401 (application/json)
+
+            {
+                "detail": "Las credenciales de autenticación no se proveyeron."
+            }
+            
+### Club detail [GET /api/1.0/club/{club_id}/]
+
++ Parameters
+    + club_id (required, int) ... Selected club id
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+
++ Response 200 (application/json)
+
+            {
+                "id": 1,
+                "name": "TheOne",
+                "logo": "none",
+                "removed": false
+            }
+
++ Response 401 (application/json)
+
+            {
+                "detail": "Las credenciales de autenticación no se proveyeron."
+            }
+
+### Club update [PATCH /api/1.0/club/{club_id}/]
+
++ Parameters
+    + club_id (required, int) ... Selected club id
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+    + Body
+
+            {
+                "name": "Verdant",
+                "logo": "still none",
+            }
+
++ Response 200 (application/json)
+
+            {
+                "id": 1,
+                "name": "Verdant",
+                "logo": "still none",
+                "removed": false
+            }
+
++ Response 401 (application/json)
+
+            {
+                "detail": "Las credenciales de autenticación no se proveyeron."
+            }
+
+### Club delete [DELETE /api/1.0/club/{club_id}/]
+
++ Parameters
+    + club_id (required, int) ... Selected club id
+
++ Request
+    + Headers
+    
+            Authorization: JWT [token]
+
++ Response 204 (application/json)
