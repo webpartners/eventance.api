@@ -54,6 +54,7 @@ The condition API
 
 + Parameters
     + club_id (required, int, `1`) ... Selected club id
+    + condition_id (required, int, `1`) ... Selected condition id
 
 + Request
     + Headers
