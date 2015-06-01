@@ -149,7 +149,7 @@ Staff event permission API
 ### Staff event permission delete [DELETE]
 
 + Parameters
-    + club_id (required, int), `1` ... Selected club id
+    + club_id (required, int), `1`) ... Selected club id
     + staff_id (required, int, `1`) ... Selected staff id
     + event_id (required, int, `1`) ... Selected event id
 
