@@ -1,0 +1,24 @@
+{
+  "name": "eventance.api",
+  "version": "1.0.0",
+  "description": "eventance api project",
+  "main": "apiary.apib",
+  "scripts": {
+    "test": "dredd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webpartners/eventance.api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webpartners/eventance.api/issues"
+  },
+  "homepage": "https://github.com/webpartners/eventance.api",
+  "devDependencies": {
+    "dredd": "^0.5.4",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2"
+  }
+}
