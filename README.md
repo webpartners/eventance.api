@@ -9,5 +9,6 @@ gulp
 To test api docs:
 
 ````
-dredd
+node app.js &
+dredd apiary.apib http://localhost:3000
 ````

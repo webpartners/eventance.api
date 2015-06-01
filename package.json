@@ -4,7 +4,7 @@
   "description": "eventance api project",
   "main": "apiary.apib",
   "scripts": {
-    "test": "dredd"
+    "test": "dredd apiary.apib http://localhost:3000"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "dredd": "^0.5.4",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2"
+  },
+  "dependencies": {
+    "express": "^4.12.4"
   }
 }
