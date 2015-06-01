@@ -4,29 +4,34 @@ The staff sesssion API
 
 ### Staff Session Detail [GET]
 
-+ Request
-    + Headers
-
-            Authorization: JWT [token]
-
 + Parameters
     + club_id (required, int, `1`) ... Selected club id
     + staff_id (required, int, `1`) ... Selected staff id
     + session_id (required, int, `1`) ... Selected session id
-    
+
++ Request
+    + Headers
+
+            Authorization: JWT [token]
             
 + Response 200 (application/json)
 
             {
                 "id": 11,
-                "session": "http://localhost:8000/api/1.0/club/1/session/1",
-                "responsible": "http://localhost:8000/api/1.0/club/1/staff/1",
-                "staff": "http://localhost:8000/api/1.0/club/1/staff/1",
+                "session": 1,
+                "responsible": 1,
+                "staff": 1,
                 "free_text": false,
                 "generator": "S-S",
                 "conditions": null,
                 "flyer": null,
-                "position": null
+                "position": null,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
 
 + Response 401 (application/json)
@@ -51,21 +56,33 @@ The staff sesssion API
             {
                 "responsible": "1",
                 "free_text": "False",
-                "conditions" : 1
+                "conditions" : 1,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
             
 + Response 201 (application/json)
 
             {
                 "id": 12,
-                "session": "http://localhost:8000/api/1.0/club/1/session/1",
-                "responsible": "http://localhost:8000/api/1.0/club/1/staff/1",
-                "staff": "http://localhost:8000/api/1.0/club/1/staff/1",
+                "session": 1,
+                "responsible": 1,
+                "staff": 1,
                 "free_text": false,
                 "generator": "S-S",
                 "conditions": 1,
                 "flyer": null,
-                "position": null
+                "position": null,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
 + Response 409 (application/json)
 
@@ -106,14 +123,20 @@ The staff sesssion API
 
             {
                 "id": 12,
-                "session": "http://localhost:8000/api/1.0/club/1/session/1",
-                "responsible": "http://localhost:8000/api/1.0/club/1/staff/1",
-                "staff": "http://localhost:8000/api/1.0/club/1/staff/1",
+                "session": 1,
+                "responsible": 1,
+                "staff": 1,
                 "free_text": true,
                 "generator": "S-S",
                 "conditions": 1,
                 "flyer": null,
-                "position": null
+                "position": null,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
 
 + Response 404 (application/json)

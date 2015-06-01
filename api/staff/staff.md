@@ -16,13 +16,9 @@ The staff API
                 "user": 1,
                 "group": 1,
                 "permissions": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7
+                    "CLUB_ACCESS",
+                    "CREATE_EVENT",
+                    "CREATE_STAFF"
                 ]
             }
             
@@ -30,17 +26,13 @@ The staff API
 
             {
                 "id": 3,
-                "club": "http://localhost:8000/api/1.0/club/1",
+                "club": 1,
                 "user": 1,
                 "group": 3,
                 "permissions": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7
+                    "CLUB_ACCESS",
+                    "CREATE_EVENT",
+                    "CREATE_STAFF"
                 ]
             }
 
@@ -70,21 +62,13 @@ The staff API
             "results": [
                 {
                     "id": 1,
-                    "club": "http://localhost:8000/api/1.0/club/1",
+                    "club": 1,
                     "user": 1,
                     "group": 1,
                     "permissions": [
-                        1,
-                        2,
-                        3,
-                        4,
-                        5,
-                        6,
-                        7,
-                        8,
-                        9,
-                        10
-                    ]
+                        "CLUB_ACCESS",
+                        "CREATE_EVENT",
+                        "CREATE_STAFF"
                 }
             ]
         }
@@ -110,20 +94,13 @@ The staff API
 
             {
                 "id": 1,
-                "club": "http://localhost:8000/api/1.0/club/1",
+                "club": 1,
                 "user": 1,
                 "group": 1,
                 "permissions": [
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10
+                    "CLUB_ACCESS",
+                    "CREATE_EVENT",
+                    "CREATE_STAFF"
                 ]
             }
 
@@ -146,8 +123,8 @@ The staff API
             {
                 "group": 2,
                 "permissions": [
-                    4,
-                    5
+                    "CLUB_ACCESS",
+                    "CREATE_STAFF"
                 ]
             }
 
@@ -155,12 +132,12 @@ The staff API
 
             {
                 "id": 1,
-                "club": "http://localhost:8000/api/1.0/club/1",
+                "club": 1,
                 "user": 1,
                 "group": 2,
                 "permissions": [
-                    4,
-                    5
+                    "CLUB_ACCESS",
+                    "CREATE_STAFF"
                 ]
             }
 
@@ -190,7 +167,7 @@ The staff API
                         "id": 1,
                         "start_time": "2015-05-11T14:15:35.000000Z",
                         "end_time": "2015-05-11T14:15:36.000000Z",
-                        "club": "http://localhost:8000/api/1.0/club/1",
+                        "club": 1,
                         "name": "Event 001",
                         "monday": true,
                         "tuesday": true,
@@ -207,7 +184,7 @@ The staff API
                         "id": 2,
                         "start_time": "2012-09-04T06:00:00.000000Z",
                         "end_time": "2012-09-04T18:00:00.000000Z",
-                        "club": "http://localhost:8000/api/1.0/club/1",
+                        "club": 1,
                         "name": "EVENT 002",
                         "monday": false,
                         "tuesday": false,

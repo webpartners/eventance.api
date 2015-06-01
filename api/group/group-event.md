@@ -21,20 +21,32 @@ The Group event API
                 "position": 1,
                 "conditions": 1,
                 "flyer": 1,
-                "responsible": 1
+                "responsible": 1,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
             
 + Response 200 (application/json)
 
             {
-                "id": "http://localhost:8000/api/1.0/club/1/group/1/event/1",
-                "group": "http://localhost:8000/api/1.0/club/1/staff-group/1",
-                "event": "http://localhost:8000/api/1.0/club/1/event/1",
-                "responsible": "http://localhost:8000/api/1.0/club/1/staff/1",
+                "id": 1,
+                "group": 1,
+                "event": 1,
+                "responsible": 1,
                 "free_text": true,
                 "position": null,
                 "conditions": null,
-                "flyer": null
+                "flyer": null,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
 
 + Response 400 (application/json)
@@ -66,14 +78,20 @@ The Group event API
 + Response 200 (application/json)
 
             {
-                "id": "http://localhost:8000/api/1.0/club/1/group/1/event/1",
-                "group": "http://localhost:8000/api/1.0/club/1/staff-group/1",
-                "event": "http://localhost:8000/api/1.0/club/1/event/1",
-                "responsible": "http://localhost:8000/api/1.0/club/1/staff/1",
+                "id": 1,
+                "group": 1,
+                "event": 1,
+                "responsible": 1,
                 "free_text": false,
                 "position": 1,
                 "conditions": 1,
-                "flyer": null
+                "flyer": null,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
 
 + Response 401 (application/json)
@@ -114,14 +132,20 @@ The Group event API
 + Response 200 (application/json)
 
             {
-                "id": "http://localhost:8000/api/1.0/club/1/group/1/event/1",
-                "group": "http://localhost:8000/api/1.0/club/1/staff-group/1",
-                "event": "http://localhost:8000/api/1.0/club/1/event/1",
-                "responsible": "http://localhost:8000/api/1.0/club/1/staff/1",
+                "id": 1,
+                "group": 1,
+                "event": 1,
+                "responsible": 1,
                 "free_text": false,
                 "position": 1,
                 "conditions": 1,
-                "flyer": null
+                "flyer": null,
+                "permissions": [
+                    "CREATE_FLYERS",
+                    "CONSUME_FLYERS",
+                    "CREATE_DRINKS",
+                    "CONSUME_DRINKS"
+                ]
             }
 
 + Response 400 (application/json)
