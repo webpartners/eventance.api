@@ -138,4 +138,4 @@ The condition API
             Authorization: JWT [token]
 
 + Response 204 (application/json)
-			
+
