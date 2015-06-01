@@ -5,7 +5,7 @@ The group API
 ### Group create [POST]
 
 + Parameters
-    + club_id (required, int) ... staff's club
+    + club_id (required, int, `1`) ... staff's club
 
 + Request
     + Headers

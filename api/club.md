@@ -72,7 +72,7 @@ The club API
 ### Club detail [GET /api/1.0/club/{club_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -97,7 +97,7 @@ The club API
 ### Club update [PATCH /api/1.0/club/{club_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -128,7 +128,7 @@ The club API
 ### Club delete [DELETE /api/1.0/club/{club_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers

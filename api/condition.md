@@ -5,7 +5,7 @@ The condition API
 ### Condition create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -53,7 +53,7 @@ The condition API
 ### Condition detail [GET /api/1.0/club/{club_id}/condition/{condition_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -85,8 +85,8 @@ The condition API
 ### Condition update [PATCH /api/1.0/club/{club_id}/condition/{condition_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + condition_id (required, int) ... Selected condition id
+    + club_id (required, int, `1`) ... Selected club id
+    + condition_id (required, int, `1`) ... Selected condition id
 
 + Request
     + Headers
@@ -129,8 +129,8 @@ The condition API
 ### Condtion delete [DELETE /api/1.0/club/{club_id}/condition/{condition_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + condition_id (required, int) ... Selected condition id
+    + club_id (required, int, `1`) ... Selected club id
+    + condition_id (required, int, `1`) ... Selected condition id
 
 + Request
     + Headers

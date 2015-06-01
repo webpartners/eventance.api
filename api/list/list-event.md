@@ -1,8 +1,8 @@
 ### List event [GET /api/1.0/club/{club_id}/list/{list_id}/event/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
 
 + Request
     + Headers
@@ -49,8 +49,8 @@
 ### List event create [POST /api/1.0/club/{club_id}/list/{list_id}/event]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
 
 + Request
     + Headers

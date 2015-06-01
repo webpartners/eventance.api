@@ -5,7 +5,7 @@ The list API
 ### List club [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -32,8 +32,8 @@ The list API
 ### List club detail [GET /api/1.0/club/{club_id}/list/{list_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
 
 + Request
     + Headers
@@ -60,7 +60,7 @@ The list API
 ### List club create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -94,8 +94,8 @@ The list API
 ### List club delete [DELETE /api/1.0/club/{club_id}/list/{list_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
 
 + Request
     + Headers

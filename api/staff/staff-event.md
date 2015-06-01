@@ -5,9 +5,9 @@ The Staff event API
 ### Staff event create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -54,9 +54,9 @@ The Staff event API
 ### Staff event detail [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -93,9 +93,9 @@ The Staff event API
 ### Staff event update [PATCH]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -151,9 +151,9 @@ The Staff event API
 ### Staff event delete [DELETE]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers

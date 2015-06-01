@@ -5,7 +5,7 @@ The Session API
 ### Session create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -48,7 +48,7 @@ The Session API
 ### Session list [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -76,8 +76,8 @@ The Session API
 ### Session detail [GET /api/1.0/club/{club_id}/session/{session_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + session_id (int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + session_id (required, int, `1`) ... Selected session id
 
 + Request
     + Headers
@@ -111,8 +111,8 @@ The Session API
 ### Session update [PATCH /api/1.0/club/{club_id}/session/{session_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + session_id (int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + session_id (required, int, `1`) ... Selected session id
 
 + Request
     + Headers

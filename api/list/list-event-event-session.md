@@ -1,8 +1,8 @@
 ### List event event-session [GET /api/1.0/club/{club_id}/list/{list_id}/event/{event_id}/event-session}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -40,8 +40,8 @@
 ### List event event-session create [POST /api/1.0/club/{club_id}/list/{list_id}/event/{event_id}/event-session}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers

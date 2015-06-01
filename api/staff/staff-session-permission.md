@@ -5,9 +5,9 @@ Staff session permission API
 ### Staff session permission create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + session_id (required, int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + session_id (required, int, `1`) ... Selected session id
 
 + Request
     + Headers
@@ -62,9 +62,9 @@ Staff session permission API
 ### Staff session permission detail [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + session_id (required, int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + session_id (required, int, `1`) ... Selected session id
 
 + Request
     + Headers
@@ -101,9 +101,9 @@ Staff session permission API
 ### Staff session permission update [PATCH]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + session_id (required, int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + session_id (required, int, `1`) ... Selected session id
 
 + Request
     + Headers
@@ -149,9 +149,9 @@ Staff session permission API
 ### Staff session permission delete [DELETE]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + session_id (required, int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + session_id (required, int, `1`) ... Selected session id
 
 + Request
     + Headers

@@ -98,8 +98,8 @@ The staff API
 ### Staff detail [GET /api/1.0/club/{club_id}/staff/{staff_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
 
 + Request
     + Headers
@@ -134,8 +134,8 @@ The staff API
 ### Staff update [PATCH /api/1.0/club/{club_id}/staff/{staff_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
 
 + Request
     + Headers
@@ -171,8 +171,8 @@ The staff API
 ### Staff events [GET /api/1.0/club/{club_id}/staff/{staff_id}/event/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
 
 + Request
     + Headers
@@ -234,8 +234,8 @@ The staff API
 ### Staff sessions [GET /api/1.0/club/{club_id}/staff/{staff_id}/session/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
 
 + Request
     + Headers
@@ -259,8 +259,8 @@ The staff API
 ### Staff stats [GET /api/1.0/club/{club_id}/staff/{staff_id}/stats/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
 
 + Request
     + Headers

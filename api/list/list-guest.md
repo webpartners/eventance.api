@@ -1,8 +1,8 @@
 ### List guest [GET /api/1.0/club/{club_id}/list/{list_id}/guest/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
 
 + Request
     + Headers
@@ -29,8 +29,8 @@
 ### List guest create [POST /api/1.0/club/{club_id}/list/{list_id}/guest]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
 
 + Request
     + Headers
@@ -61,9 +61,9 @@
 ### List guest delete [DELETE /api/1.0/club/{club_id}/list/{list_id}/guest/{guest_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + list_id (required, int) ... Selected list id
-    + guest_id (required, int) ... Selected guest id
+    + club_id (required, int, `1`) ... Selected club id
+    + list_id (required, int, `1`) ... Selected list id
+    + guest_id (required, int, `1`) ... Selected guest id
 
 + Request
     + Headers

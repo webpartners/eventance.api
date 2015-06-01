@@ -1,4 +1,4 @@
-# Event Event-Session [/api/1.0/club/{club_id}/event/{event_id}/event-session/?{?from}&{?to}]
+# Event Event-Session [/api/1.0/club/{club_id}/event/{event_id}/event-session/?{?from,to}]
 
 The Event Event-Session API
 
@@ -6,8 +6,8 @@ The Event Event-Session API
 
 + Parameters
 
-    + club_id (required, int) ... Selected club id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + event_id (required, int, `1`) ... Selected event id
     + from (optional, date) ... Start time of Filter by start_time (YYYY-MM-DD)
     + to (optional, date) ... End time of Filter by start_time (YYYY-MM-DD)
 
@@ -45,8 +45,8 @@ The Event Event-Session API
 
 + Parameters
 
-    + club_id (required, int) ... Selected club id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers

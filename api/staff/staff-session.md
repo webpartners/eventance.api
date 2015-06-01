@@ -10,9 +10,9 @@ The staff sesssion API
             Authorization: JWT [token]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + staff_id (required, int) ... Selected staff id
-    + session_id (required, int) ... Selected session id
+    + club_id (required, int, `1`) ... Selected club id
+    + staff_id (required, int, `1`) ... Selected staff id
+    + session_id (required, int, `1`) ... Selected session id
     
             
 + Response 200 (application/json)

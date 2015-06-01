@@ -5,7 +5,7 @@ The zone API
 ### Zone create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -39,7 +39,7 @@ The zone API
 ### Zone list [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
 
 + Request
     + Headers
@@ -70,8 +70,8 @@ The zone API
 ### Zone update [PATCH /api/1.0/club/{club_id}/zone/{zone_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + zone_id (required, int) ... Selected zone id
+    + club_id (required, int, `1`) ... Selected club id
+    + zone_id (required, int, `1`) ... Selected zone id
 
 + Request
     + Headers
@@ -100,8 +100,8 @@ The zone API
 ### Zone delete [DELETE /api/1.0/club/{club_id}/zone/{zone_id}/]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + zone_id (required, int) ... Selected zone id
+    + club_id (required, int, `1`) ... Selected club id
+    + zone_id (required, int, `1`) ... Selected zone id
 
 + Request
     + Headers

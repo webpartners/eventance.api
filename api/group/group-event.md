@@ -5,9 +5,9 @@ The Group event API
 ### Group event create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + group_id (required, int) ... Selected group id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + group_id (required, int, `1`) ... Selected group id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -54,9 +54,9 @@ The Group event API
 ### Group event detail [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + group_id (required, int) ... Selected group id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + group_id (required, int, `1`) ... Selected group id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -93,9 +93,9 @@ The Group event API
 ### Group event update [PATCH]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + group_id (required, int) ... Selected group id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + group_id (required, int, `1`) ... Selected group id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers
@@ -151,9 +151,9 @@ The Group event API
 ### Group event delete [DELETE]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + group_id (required, int) ... Selected group id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + group_id (required, int, `1`) ... Selected group id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
     + Headers

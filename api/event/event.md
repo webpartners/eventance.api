@@ -1,13 +1,13 @@
-# Event [/api/1.0/club/{club_id}/event/?{?from}&{?to}]
+# Event [/api/1.0/club/{club_id}/event/?{?from,to}]
 
 The Event API
 
 ### Event List [GET]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + from (optional, date) ... Start time of Filter by start_time (YYYY-MM-DD)
-    + to (optional, date) ... End time of Filter by start_time (YYYY-MM-DD)
+    + club_id (required, int, `1`) ... Selected club id
+    + from (optional, date, `1`) ... Start time of Filter by start_time (YYYY-MM-DD)
+    + to (optional, date, `1`) ... End time of Filter by start_time (YYYY-MM-DD)
 + Request
     + Headers
     
@@ -77,7 +77,7 @@ The Event API
 ### Event Create [POST]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
+    + club_id (required, int, `1`) ... Selected club id
     
 + Request
     + Headers
@@ -152,8 +152,8 @@ The Event API
 ### Event detail [GET /api/1.0/club/{club_id}/event/{event_id}]
 
 + Parameters
-    + club_id (required, int) ... Selected club id
-    + event_id (required, int) ... Selected event id
+    + club_id (required, int, `1`) ... Selected club id
+    + event_id (required, int, `1`) ... Selected event id
 
 + Request
 
